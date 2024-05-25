@@ -17,6 +17,4 @@ public class AddressEntity {
     @JoinColumn(name = "user_id")
     private UserEntity user;
 
-    public void setUser(UserEntity userEntity) {
-    }
 }

@@ -20,7 +20,7 @@ public class UserEntity {
     private String password;
     @Enumerated(EnumType.STRING)
     private Subscription subscription;
-    @OneToMany(mappedBy = "user", cascade =  CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<AddressEntity> addresses = new ArrayList<>();
     @ManyToMany
     @JoinTable(
