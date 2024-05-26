@@ -1,4 +1,11 @@
 package com.xhak.demo.dto.addressDtos;
 
 public class ResponseAddressDTO {
+    private Long id;
+    private String state;
+    private String city;
+    private String street;
+    private String zipCode;
+    private Long userId;
+    private String userFirstName;
 }

@@ -15,4 +15,5 @@ public class CreateAddressDTO {
     private String street;
     @NotBlank(message = "Zip code is required")
     private String zipCode;
+    private Long userId;
 }

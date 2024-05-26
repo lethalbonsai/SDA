@@ -21,10 +21,10 @@ public class CartEntity {
     @Column(name = "ID")
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "USER_ID")
     private UserEntity username;
 
-    @OneToMany(mappedBy = "cart")
+    @OneToMany(mappedBy = "CART_ID")
     private List<OrderItemEntity> orderItems;
 }
 

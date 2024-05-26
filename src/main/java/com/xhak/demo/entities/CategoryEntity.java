@@ -24,6 +24,6 @@ public class CategoryEntity {
     private String name;
 
     @OneToMany(mappedBy = "category")
-    private List<ProductEntity> products;
+    private List<ProductEntity> productsList;
 
 }
