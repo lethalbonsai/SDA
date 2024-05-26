@@ -1,26 +1,20 @@
 package com.xhak.demo.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+
+import com.xhak.demo.constant.Role;
+import jakarta.persistence.*;
 
 
-@AllArgsConstructor
-@NoArgsConstructor
+import java.util.HashSet;
+import java.util.Set;
 
-@Table
 @Entity
 public class RoleEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-
-    @Column(nullable = false)
-    private String user;
-
-    @Column(nullable = false)
-    private String admin;
+    @Enumerated(EnumType.STRING)
+    private Role roleName;
+    @ManyToMany(mappedBy = "roles")
+    private Set<UserEntity> users = new HashSet<>();
 }

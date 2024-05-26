@@ -1,38 +1,37 @@
 package com.xhak.demo.entities;
 
+import jakarta.persistence.*;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.Flow;
 
-@AllArgsConstructor
-@NoArgsConstructor
-
-@Table
 @Entity
 public class UserEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-
+    @Column(nullable = false, length = 50)
     private String username;
-
-    @Column(nullable = false)
-    private String password;
-
-
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String email;
+    @Column(nullable = false, length = 50)
+    private String password;
+    @Enumerated(EnumType.STRING)
+    private Flow.Subscription subscription;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<AddressEntity> addresses = new ArrayList<>();
+    @ManyToMany
+    @JoinTable(
+            name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Set<RoleEntity> roles = new HashSet<>();
 
-    @Column(nullable = false)
-    private String address;
-
-    @Column(nullable = false)
-    private String subscribtion;
-
-    @Column(nullable = false)
-    private String role;
+    public List<AddressEntity> getAddresses() {
+        return addresses;
+    }
 }
