@@ -1,6 +1,6 @@
-package com.xhak.demo.dto.ReviewDtos;
+package com.xhak.demo.dto.reviewDtos;
 
-import com.xhak.demo.dto.UserDTO;
+import com.xhak.demo.dto.userDtos.CreateUserDTO;
 import com.xhak.demo.dto.productdtos.CreateProductDTO;
 import com.xhak.demo.dto.productdtos.ResponseProductDTO;
 import lombok.Getter;
@@ -10,9 +10,8 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class ReviewDTO {
-    private Long id;
-    private UserDTO user;
+public class CreateReviewDTO {
+    private CreateUserDTO user;
     private CreateProductDTO createProductDTO;
     private ResponseProductDTO responseProductDTO;
     private Long rating;

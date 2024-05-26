@@ -16,9 +16,10 @@ import java.time.LocalDateTime;
 public class OrderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "USER_ID")
     private UserEntity username;
     @Column(name = "PRICE")
     private  Long price;

@@ -1,8 +1,8 @@
-package com.xhak.demo.dto;
+package com.xhak.demo.dto.userDtos;
 
 
 import com.xhak.demo.constant.Subscription;
-import com.xhak.demo.entities.AddressEntity;
+import com.xhak.demo.dto.addressDtos.CreateAddressDTO;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,14 +11,12 @@ import java.util.List;
 
 @Getter
 @Setter
-public class UserDTO {
-
-    private Long id;
+public class CreateUserDTO {
     private String firstName;
     private String lastName;
     private String username;
     private String email;
     private Subscription subscription;
-    private List<AddressDTO> addresses;
+    private List<CreateAddressDTO> addresses;
 
 }

@@ -20,12 +20,13 @@ import java.util.Set;
 public class RoleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
     @Enumerated(EnumType.STRING)
     @Column(name = "ROLE_NAME")
     private Role roleName;
     @ManyToMany(mappedBy = "roles")
-    @Column(name = "users")
+    @Column(name = "USERS")
     private Set<UserEntity> users = new HashSet<>();
 }
 

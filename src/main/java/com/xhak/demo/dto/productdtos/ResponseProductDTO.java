@@ -1,6 +1,6 @@
 package com.xhak.demo.dto.productdtos;
 
-import com.xhak.demo.dto.ReviewDtos.ReviewDTO;
+import com.xhak.demo.dto.reviewDtos.CreateReviewDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,5 +16,5 @@ public class ResponseProductDTO {
     private String productType;
     private Long categoryId;
 
-    private List<ReviewDTO> reviewDTOList;
+    private List<CreateReviewDTO> createReviewDTOList;
 }

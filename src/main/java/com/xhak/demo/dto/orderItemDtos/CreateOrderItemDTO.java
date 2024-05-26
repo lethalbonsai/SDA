@@ -1,15 +1,15 @@
-package com.xhak.demo.dto;
+package com.xhak.demo.dto.orderItemDtos;
 
+import com.xhak.demo.dto.cartDtos.CreateCartDTO;
 import com.xhak.demo.dto.productdtos.CreateProductDTO;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class OrderItemDTO {
-    private Long id;
+public class CreateOrderItemDTO {
     private CreateProductDTO product;
-    private CartDTO cart;
+    private CreateCartDTO cart;
     private int quantity;
     private double price;
     private double totalPrice;

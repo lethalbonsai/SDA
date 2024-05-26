@@ -15,12 +15,13 @@ import lombok.Setter;
 public class OrderItemEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
     @OneToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "ORDER_ID")
     private ProductEntity product;
     @ManyToOne
-    @JoinColumn(name = "cart_id")
+    @JoinColumn(name = "CART_ID")
     private CartEntity cart;
     @Column(name = "QUANTITY")
     private Long quantity;

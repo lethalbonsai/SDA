@@ -1,5 +1,6 @@
-package com.xhak.demo.dto;
+package com.xhak.demo.dto.orderDtos;
 
+import com.xhak.demo.dto.userDtos.CreateUserDTO;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,9 +8,8 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class OrderDTO {
-    private Long id;
-    private UserDTO user;
+public class CreateOrderDTO {
+    private CreateUserDTO user;
     private Long price;
     private String status;
     private LocalDateTime orderDate;

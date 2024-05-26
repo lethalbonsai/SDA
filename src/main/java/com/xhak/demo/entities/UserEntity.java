@@ -21,16 +21,17 @@ import java.util.Set;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
-
+    @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;
+    @Column(name = "LAST_NAME", nullable = false)
     private String lastName;
-
-    @Column(nullable = false, length = 50)
+    @Column(name = "USERNAME", nullable = false, unique = true)
     private String username;
-    @Column(nullable = false, length = 50)
+    @Column(name = "EMAIL", nullable = false, unique = true)
     private String email;
-    @Column(nullable = false, length = 50)
+    @Column(name = "PASSWORD", nullable = false)
     private String password;
     @Enumerated(EnumType.STRING)
     private Subscription subscription;
@@ -38,9 +39,9 @@ public class UserEntity {
     private List<AddressEntity> addresses = new ArrayList<>();
     @ManyToMany
     @JoinTable(
-            name = "user_role",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id")
+            name = "USER_ROLE",
+            joinColumns = @JoinColumn(name = "USER_ID", referencedColumnName = "ID"),
+            inverseJoinColumns = @JoinColumn(name = "ROLE_ID", referencedColumnName = "ID")
     )
     private Set<RoleEntity> roles = new HashSet<>();
 

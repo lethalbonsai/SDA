@@ -18,6 +18,7 @@ import java.util.List;
 public class CartEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
     @ManyToOne
     @JoinColumn(name = "user_id")

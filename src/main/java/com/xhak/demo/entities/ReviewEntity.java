@@ -17,13 +17,14 @@ import java.time.LocalDateTime;
 public class ReviewEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "USER_ID")
     private UserEntity userrname;
     @ManyToOne
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "PRODUCT_ID")
     private ProductEntity product;
     @Column(name = "RATING")
     private Long rating;

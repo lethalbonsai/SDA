@@ -16,6 +16,7 @@ import lombok.Setter;
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
     @Column(name = "TITLE")
     private String title;
@@ -29,6 +30,6 @@ public class ProductEntity {
     @Column(name = "PRODUCT_TYPE")
     private Products productType;
     @ManyToOne
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "CATEGORY_ID")
     private CategoryEntity category;
 }
