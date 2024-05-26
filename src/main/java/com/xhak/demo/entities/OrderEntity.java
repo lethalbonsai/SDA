@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -29,6 +28,4 @@ public class OrderEntity {
     private LocalDateTime orderDate;
     @Column(name = "DELIVERY_DATE")
     private LocalDateTime deliveryDate;
-
-
 }

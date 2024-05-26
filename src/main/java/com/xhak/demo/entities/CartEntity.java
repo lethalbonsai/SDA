@@ -14,6 +14,7 @@ import java.util.List;
 @Getter
 @Setter
 @Table(name = "CART")
+
 public class CartEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +26,4 @@ public class CartEntity {
     @OneToMany(mappedBy = "cart")
     private List<OrderItemEntity> orderItems;
 
-}
+

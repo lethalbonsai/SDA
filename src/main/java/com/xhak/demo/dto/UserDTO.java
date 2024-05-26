@@ -1,6 +1,9 @@
 package com.xhak.demo.dto;
 
+
 import com.xhak.demo.constant.Subscription;
+import com.xhak.demo.entities.AddressEntity;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,4 +20,5 @@ public class UserDTO {
     private String email;
     private Subscription subscription;
     private List<AddressDTO> addresses;
+
 }

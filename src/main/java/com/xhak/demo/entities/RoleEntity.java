@@ -1,13 +1,13 @@
 package com.xhak.demo.entities;
 
 
+
 import com.xhak.demo.constant.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,3 +28,4 @@ public class RoleEntity {
     @Column(name = "users")
     private Set<UserEntity> users = new HashSet<>();
 }
+

@@ -12,6 +12,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "ADDRESS")
+
 public class AddressEntity {
 
     @Id
