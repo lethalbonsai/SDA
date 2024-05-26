@@ -1,5 +1,6 @@
 package com.xhak.demo.entities;
 
+import com.xhak.demo.constant.Subscription;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public class UserEntity {
     @Column(nullable = false, length = 50)
     private String password;
     @Enumerated(EnumType.STRING)
-    private Flow.Subscription subscription;
+    private Subscription subscription;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<AddressEntity> addresses = new ArrayList<>();
     @ManyToMany
