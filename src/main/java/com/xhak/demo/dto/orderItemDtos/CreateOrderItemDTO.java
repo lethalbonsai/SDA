@@ -8,9 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CreateOrderItemDTO {
-    private CreateProductDTO product;
-    private CreateCartDTO cart;
-    private int quantity;
+    private Long quantity;
     private double price;
     private double totalPrice;
 }

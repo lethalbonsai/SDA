@@ -18,11 +18,14 @@ public class OrderItemEntity {
     @Column(name = "ID")
     private Long id;
     @OneToOne
-    @JoinColumn(name = "ORDER_ID")
-    private ProductEntity product;
-    @ManyToOne
+    @JoinColumn(name = "PRODUCT_ID")
+    private ProductEntity productId;
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CART_ID")
-    private CartEntity cart;
+    private CartEntity cartId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ORDER_ID")
+    private OrderEntity orderId;
     @Column(name = "QUANTITY")
     private Long quantity;
     @Column(name = "TOTAL_PRICE")

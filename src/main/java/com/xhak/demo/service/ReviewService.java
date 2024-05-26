@@ -7,5 +7,5 @@ public interface ReviewService {
     ReviewService getReviewById(Long id);
     ReviewService createReview(ReviewService reviewService);
     ReviewService updateReview(ReviewService reviewService);
-    ReviewService deleteReview(Long id);
+    void deleteReview(Long id);
 }

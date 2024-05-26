@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -24,8 +25,8 @@ public class CartEntity {
     @JoinColumn(name = "USER_ID")
     private UserEntity username;
 
-    @OneToMany(mappedBy = "CART_ID")
-    private List<OrderItemEntity> orderItems;
+    @OneToMany(mappedBy = "cartId")
+    private List<OrderItemEntity> orderItems ;
 }
 
 
