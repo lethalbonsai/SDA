@@ -1,5 +1,6 @@
 package com.xhak.demo.entities;
 
+
 import com.xhak.demo.constant.Role;
 import jakarta.persistence.*;
 import org.apache.catalina.User;
