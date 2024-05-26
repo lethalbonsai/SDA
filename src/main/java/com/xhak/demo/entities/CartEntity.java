@@ -25,5 +25,6 @@ public class CartEntity {
 
     @OneToMany(mappedBy = "cart")
     private List<OrderItemEntity> orderItems;
+}
 
 
