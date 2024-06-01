@@ -29,5 +29,5 @@ public class OrderItemEntity {
     @Column(name = "QUANTITY")
     private Long quantity;
     @Column(name = "TOTAL_PRICE")
-    private Long totalPrice;
+    private double totalPrice;
 }
