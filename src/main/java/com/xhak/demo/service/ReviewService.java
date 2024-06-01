@@ -1,11 +1,14 @@
 package com.xhak.demo.service;
 
+import com.xhak.demo.dto.reviewDtos.CreateReviewDTO;
+
 import java.util.List;
+import java.util.Optional;
 
 public interface ReviewService {
-    List<ReviewService> getAllReviews();
-    ReviewService getReviewById(Long id);
-    ReviewService createReview(ReviewService reviewService);
-    ReviewService updateReview(ReviewService reviewService);
+    List<CreateReviewDTO> getAllReviews();
+    Optional<CreateReviewDTO> getReviewById(Long id);
+    Long createReview(CreateReviewDTO createReviewDTO;
+    CreateReviewDTO updateReview(CreateReviewDTO createReviewDTO);
     String deleteReview(Long id);
 }
