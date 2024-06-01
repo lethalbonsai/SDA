@@ -19,10 +19,9 @@ public class ReviewEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
-
     @ManyToOne
     @JoinColumn(name = "USER_ID")
-    private UserEntity userrname;
+    private UserEntity username;
     @ManyToOne
     @JoinColumn(name = "PRODUCT_ID")
     private ProductEntity product;
