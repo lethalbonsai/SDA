@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ProductService {
-    List<CreateProductDTO> getAllReviews();
-    Optional<CreateProductDTO> getReviewById(Long id);
+    List<ResponseProductDTO> getAllReviews();
+    Optional<ResponseProductDTO> getReviewById(Long id);
     Long createProduct(CreateProductDTO createProductDTO);
     CreateProductDTO updateProduct(Long id, CreateProductDTO createProductDTO);
     String deleteProduct(Long id);
