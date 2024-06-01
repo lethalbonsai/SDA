@@ -11,5 +11,5 @@ public class CreateProductDTO {
     private String description;
     private double price;
     private Long quantity;
-    private ProductEntity productType;
+    private String productType;
 }

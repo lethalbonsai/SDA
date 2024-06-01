@@ -1,6 +1,5 @@
 package com.xhak.demo.entities;
 
-import com.xhak.demo.constant.Subscription;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,8 +32,8 @@ public class UserEntity {
     private String email;
     @Column(name = "PASSWORD", nullable = false)
     private String password;
-    @Enumerated(EnumType.STRING)
-    private Subscription subscription;
+    @Column(name = "SUBSCRIPTION")
+    private String subscription;
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<AddressEntity> addresses = new ArrayList<>();
     @ManyToMany
@@ -45,8 +44,8 @@ public class UserEntity {
     )
     private Set<RoleEntity> roles = new HashSet<>();
 
-    public List<AddressEntity> getAddresses() {
-        return addresses;
-    }
+//    public List<AddressEntity> getAddresses() {
+//        return addresses;
+//    }
 }
 

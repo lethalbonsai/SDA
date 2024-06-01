@@ -1,17 +1,25 @@
 package com.xhak.demo.mapper;
 
 import com.xhak.demo.dto.reviewDtos.CreateReviewDTO;
+import com.xhak.demo.dto.reviewDtos.ResponseReviewDTO;
 import com.xhak.demo.entities.ReviewEntity;
 import org.springframework.stereotype.Component;
 
 @Component
 public class ReviewMapper {
-    ReviewEntity mapToEntity(CreateReviewDTO createReviewDTO){
+    public ResponseReviewDTO toResponseReviewDTO(ReviewEntity reviewEntity){
+        ResponseReviewDTO responseReviewDTO = new ResponseReviewDTO();
+        responseReviewDTO.setId(reviewEntity.getId());
+        responseReviewDTO.setRating(reviewEntity.getRating());
+        responseReviewDTO.setComment(reviewEntity.getComment());
+        responseReviewDTO.setCreatedTime(reviewEntity.getCreatedTime());
+        return responseReviewDTO;
+    }
+    public ReviewEntity toMapToEntity(CreateReviewDTO createReviewDTO){
         ReviewEntity reviewEntity = new ReviewEntity();
-        reviewEntity.setComment(createReviewDTO.getComment());
         reviewEntity.setRating(createReviewDTO.getRating());
+        reviewEntity.setComment(createReviewDTO.getComment());
         reviewEntity.setCreatedTime(createReviewDTO.getCreatedTime());
-
         return reviewEntity;
     }
 }

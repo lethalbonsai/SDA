@@ -1,7 +1,6 @@
 package com.xhak.demo.dto.userDtos;
 
 
-import com.xhak.demo.constant.Subscription;
 import com.xhak.demo.dto.addressDtos.CreateAddressDTO;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,7 +13,7 @@ public class CreateUserDTO {
     private String lastName;
     private String username;
     private String email;
-    private Subscription subscription;
+    private String subscription;
     private List<CreateAddressDTO> addresses;
 
 }

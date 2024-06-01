@@ -10,10 +10,10 @@ import java.util.List;
 @Setter
 public class ResponseProductDTO {
     private Long id;
-    private String name;
+    private String title;
     private String description;
     private double price;
-    private int quantity;
+    private Long quantity;
     private String productType;
     private Long categoryId;
     private List<CreateReviewDTO> createReviewDTOList;

@@ -26,9 +26,8 @@ public class ProductEntity {
     private double price;
     @Column(name = "QUANTITY")
     private Long quantity;
-    @Enumerated(EnumType.STRING)
     @Column(name = "PRODUCT_TYPE")
-    private Products productType;
+    private String productType;
     @ManyToOne
     @JoinColumn(name = "CATEGORY_ID")
     private CategoryEntity category;

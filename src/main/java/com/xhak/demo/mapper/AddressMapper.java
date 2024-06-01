@@ -3,7 +3,9 @@ package com.xhak.demo.mapper;
 import com.xhak.demo.dto.addressDtos.CreateAddressDTO;
 import com.xhak.demo.dto.addressDtos.ResponseAddressDTO;
 import com.xhak.demo.entities.AddressEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AddressMapper {
     public ResponseAddressDTO toResponseAddressDTO(AddressEntity addressEntity) {
         ResponseAddressDTO responseAddressDTO = new ResponseAddressDTO();
