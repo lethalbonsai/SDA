@@ -1,7 +1,11 @@
 package com.xhak.demo.dto.reviewDtos;
 
+import lombok.Getter;
+import lombok.Setter;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 public class ResponseReviewDTO {
     private Long id;
     private Long rating;

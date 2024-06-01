@@ -1,5 +1,10 @@
 package com.xhak.demo.dto.addressDtos;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class ResponseAddressDTO {
     private Long id;
     private String state;
