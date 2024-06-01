@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface ReviewService {
     List<CreateReviewDTO> getAllReviews();
     Optional<CreateReviewDTO> getReviewById(Long id);
-    Long createReview(CreateReviewDTO createReviewDTO;
+    Long createReview(CreateReviewDTO createReviewDTO);
     CreateReviewDTO updateReview(CreateReviewDTO createReviewDTO);
     String deleteReview(Long id);
 }
