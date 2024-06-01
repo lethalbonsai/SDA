@@ -1,12 +1,14 @@
 package com.xhak.demo.service;
 
 import com.xhak.demo.dto.productdtos.CreateProductDTO;
+import com.xhak.demo.dto.productdtos.ResponseProductDTO;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProductService {
     List<CreateProductDTO> getAllReviews();
-    CreateProductDTO getReviewById(Long id);
+    Optional<CreateProductDTO> getReviewById(Long id);
     Long createProduct(CreateProductDTO createProductDTO);
     CreateProductDTO updateProduct(Long id, CreateProductDTO createProductDTO);
     String deleteProduct(Long id);

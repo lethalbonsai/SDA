@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AddressRepository extends JpaRepository<AddressEntity, Long> {
-
         List<AddressEntity> findAllById(Long id);
         Optional<AddressEntity> findByCity(String city);
         Optional<AddressEntity> findByStreet(String street);
