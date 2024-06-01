@@ -2,7 +2,6 @@ package com.xhak.demo.entities;
 
 
 
-import com.xhak.demo.constant.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,9 +21,8 @@ public class RoleEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
-    @Enumerated(EnumType.STRING)
     @Column(name = "ROLE_NAME")
-    private Role roleName;
+    private String roleName;
     @ManyToMany(mappedBy = "roles")
     @Column(name = "USERS")
     private Set<UserEntity> users = new HashSet<>();

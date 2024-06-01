@@ -20,16 +20,16 @@ public class AddressEntity {
     private Long id;
     @NotBlank(message = "State is required")
     @Column(name = "STATE")
-    private String State;
+    private String state;
     @NotBlank(message = "City is required")
     @Column(name = "CITY")
-    private String City;
+    private String city;
     @NotBlank(message = "Street is required")
     @Column(name = "STREET")
-    private String Street;
+    private String street;
     @NotBlank(message = "Zip code is required")
     @Column(name = "ZIP_CODE")
-    private String ZipCode;
+    private String zipCode;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity user;

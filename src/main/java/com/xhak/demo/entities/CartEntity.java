@@ -23,7 +23,7 @@ public class CartEntity {
     private Long id;
     @ManyToOne
     @JoinColumn(name = "USER_ID")
-    private UserEntity username;
+    private UserEntity userId;
 
     @OneToMany(mappedBy = "cartId")
     private List<OrderItemEntity> orderItems ;
