@@ -2,7 +2,9 @@ package com.xhak.demo.mapper;
 
 import com.xhak.demo.dto.orderItemDtos.ResponseOrderItemDTO;
 import com.xhak.demo.entities.OrderItemEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderItemMapper {
     public ResponseOrderItemDTO responseOrderItemDTO(OrderItemEntity orderItemEntity) {
         ResponseOrderItemDTO responseOrderItemDTO = new ResponseOrderItemDTO();

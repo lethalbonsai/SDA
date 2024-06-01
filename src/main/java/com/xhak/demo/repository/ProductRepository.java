@@ -3,7 +3,6 @@ package com.xhak.demo.repository;
 import com.xhak.demo.entities.CategoryEntity;
 import com.xhak.demo.entities.ProductEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.List;
 import java.util.Optional;
 
