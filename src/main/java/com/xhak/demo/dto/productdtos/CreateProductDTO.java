@@ -12,5 +12,4 @@ public class CreateProductDTO {
     private double price;
     private Long quantity;
     private ProductEntity productType;
-    private Long categoryId;
 }

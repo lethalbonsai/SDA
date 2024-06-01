@@ -9,12 +9,12 @@ import java.util.List;
 @Getter
 @Setter
 public class ResponseProductDTO {
+    private Long id;
     private String name;
     private String description;
     private double price;
     private int quantity;
     private String productType;
     private Long categoryId;
-
     private List<CreateReviewDTO> createReviewDTOList;
 }

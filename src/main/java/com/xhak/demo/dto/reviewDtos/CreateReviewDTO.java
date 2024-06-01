@@ -11,9 +11,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class CreateReviewDTO {
-    private CreateUserDTO user;
-    private CreateProductDTO createProductDTO;
-    private ResponseProductDTO responseProductDTO;
     private Long rating;
     private String comment;
     private LocalDateTime createdTime;
