@@ -9,6 +9,6 @@ public interface ReviewService {
     List<ResponseReviewDTO> getAllReviews();
     Optional<ResponseReviewDTO> getReviewById(Long id);
     Long createReview(CreateReviewDTO createReviewDTO);
-    CreateReviewDTO updateReview(CreateReviewDTO createReviewDTO);
+    CreateReviewDTO updateReview(Long id, CreateReviewDTO createReviewDTO);
     String deleteReview(Long id);
 }

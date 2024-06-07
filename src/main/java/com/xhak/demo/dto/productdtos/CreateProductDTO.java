@@ -1,6 +1,5 @@
 package com.xhak.demo.dto.productdtos;
 
-import com.xhak.demo.entities.ProductEntity;
 import lombok.Getter;
 import lombok.Setter;
 

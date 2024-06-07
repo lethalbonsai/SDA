@@ -24,7 +24,7 @@ public class AddressMapper {
         addressEntity.setZipCode(createAddressDTO.getZipCode());
         return addressEntity;
     }
-    public CreateAddressDTO mapToCreateAddressDTO(AddressEntity addressEntity) {
+    public CreateAddressDTO mapToCreateAddressEntity(AddressEntity addressEntity) {
         CreateAddressDTO createAddressDTO = new CreateAddressDTO();
         createAddressDTO.setState(addressEntity.getState());
         createAddressDTO.setCity(addressEntity.getCity());

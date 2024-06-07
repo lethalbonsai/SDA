@@ -7,11 +7,14 @@ import com.xhak.demo.mapper.AddressMapper;
 import com.xhak.demo.repository.AddressRepository;
 import com.xhak.demo.service.AddressService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @AllArgsConstructor
+@Service
 public class AddressServiceFromDB implements AddressService {
 
     private AddressRepository addressRepository;
@@ -46,7 +49,7 @@ public class AddressServiceFromDB implements AddressService {
                 () -> new RuntimeException("Address with id: " + id + " was not found!"));
         addressMapper.mapToAddressEntity(createAddressDTO);
         AddressEntity updatedAddress = addressRepository.save(findAddress);
-        return addressMapper.mapToCreateAddressDTO(updatedAddress);
+        return addressMapper.mapToCreateAddressEntity(updatedAddress);
     }
 
     @Override

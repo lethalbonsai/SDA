@@ -9,6 +9,6 @@ public interface RoleService {
     List<ResponseRoleDTO> getAllRoles();
     Optional<ResponseRoleDTO> getRoleById(Long id);
     Long createRole(CreateRoleDTO createRoleDTO);
-    CreateRoleDTO updateRole(CreateRoleDTO createRoleDTO);
+    CreateRoleDTO updateRole(Long id, CreateRoleDTO createRoleDTO);
     String deleteRole(Long id);
 }

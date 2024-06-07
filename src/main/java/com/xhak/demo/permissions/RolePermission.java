@@ -1,4 +1,4 @@
-package com.xhak.demo.constant.permissions;
+package com.xhak.demo.permissions;
 
 public enum RolePermission {
     ADMIN_READ("admin.read"),

@@ -9,6 +9,6 @@ public interface OrderService {
     List<ResponseOrderDTO> getAllOrders();
     Optional<ResponseOrderDTO> getOrderById(Long id);
     Long createOrder(CreateOrderDTO createOrderDTO);
-    CreateOrderDTO updateOrder(CreateOrderDTO createOrderDTO);
+    CreateOrderDTO updateOrder(Long id, CreateOrderDTO createOrderDTO);
     String deleteOrder(Long id);
 }

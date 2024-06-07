@@ -8,12 +8,14 @@ import com.xhak.demo.mapper.CartMapper;
 import com.xhak.demo.repository.CartRepository;
 import com.xhak.demo.service.CartService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @AllArgsConstructor
+@Service
 public class CartServiceFromDB implements CartService {
 
     private CartRepository cartRepository;

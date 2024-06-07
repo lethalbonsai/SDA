@@ -34,15 +34,16 @@ public class UserEntity {
     private String password;
     @Column(name = "SUBSCRIPTION")
     private String subscription;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<AddressEntity> addresses = new ArrayList<>();
-    @ManyToMany
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+//    private List<AddressEntity> addresses = new ArrayList<>();
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "USER_ROLE",
             joinColumns = @JoinColumn(name = "USER_ID", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "ROLE_ID", referencedColumnName = "ID")
     )
     private Set<RoleEntity> roles = new HashSet<>();
+
 
 //    public List<AddressEntity> getAddresses() {
 //        return addresses;

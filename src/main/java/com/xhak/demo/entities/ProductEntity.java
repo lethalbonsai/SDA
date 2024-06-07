@@ -1,6 +1,5 @@
 package com.xhak.demo.entities;
 
-import com.xhak.demo.constant.Products;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

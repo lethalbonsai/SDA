@@ -6,10 +6,13 @@ import com.xhak.demo.mapper.UserMapper;
 import com.xhak.demo.repository.UserRepository;
 import com.xhak.demo.service.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
 @AllArgsConstructor
+@Service
 public class UserServiceFromDB implements UserService {
     UserRepository userRepository;
     UserMapper userMapper;

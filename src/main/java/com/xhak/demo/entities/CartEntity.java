@@ -25,8 +25,8 @@ public class CartEntity {
     @JoinColumn(name = "USER_ID")
     private UserEntity userId;
 
-    @OneToMany(mappedBy = "cartId")
-    private List<OrderItemEntity> orderItems ;
+//    @OneToMany(mappedBy = "cartId")
+//    private List<OrderItemEntity> orderItems ;
 }
 
 

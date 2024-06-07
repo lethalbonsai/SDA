@@ -6,10 +6,13 @@ import com.xhak.demo.mapper.ReviewMapper;
 import com.xhak.demo.repository.ReviewRepository;
 import com.xhak.demo.service.ReviewService;
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
 @AllArgsConstructor
+@Service
 public class ReviewServiceFromDB implements ReviewService {
     ReviewRepository reviewRepository;
     ReviewMapper reviewMapper;
@@ -29,7 +32,7 @@ public class ReviewServiceFromDB implements ReviewService {
     }
 
     @Override
-    public CreateReviewDTO updateReview(CreateReviewDTO createReviewDTO) {
+    public CreateReviewDTO updateReview(Long id, CreateReviewDTO createReviewDTO) {
         return null;
     }
 
