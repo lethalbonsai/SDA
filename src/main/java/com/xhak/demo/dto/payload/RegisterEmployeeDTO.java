@@ -13,5 +13,6 @@ public class RegisterEmployeeDTO {
     private String password;
     private String firstName;
     private String lastName;
+    private String phoneNumber;
     private List<AddressEntity> addressList;
 }

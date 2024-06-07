@@ -33,4 +33,7 @@ public class AddressEntity {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity user;
+    @ManyToOne
+    @JoinColumn(name = "client_id")
+    private ClientEntity client;
 }

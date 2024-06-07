@@ -1,6 +1,7 @@
 package com.xhak.demo.controllers;
 
 import com.xhak.demo.dto.payload.LogInDTO;
+import com.xhak.demo.dto.payload.RegisterEmployeeDTO;
 import com.xhak.demo.service.impl.AuthServiceFromDB;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +18,12 @@ public class AuthController {
     private AuthServiceFromDB authServiceFromDB;
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(LogInDTO logInDTO) {
+    public ResponseEntity<String> login(@RequestBody LogInDTO logInDTO) {
         return ResponseEntity.ok(authServiceFromDB.accountLogin(logInDTO));
     }
 
     @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody ) {
-        return ResponseEntity.ok("User registered!");
+    public ResponseEntity<String> register(@RequestBody RegisterEmployeeDTO registerEmployeeDTO) {
+        return ResponseEntity.ok(authServiceFromDB.registerAccount(registerEmployeeDTO));
     }
 }
