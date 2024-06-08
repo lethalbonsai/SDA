@@ -48,9 +48,5 @@ public class UserEntity {
     @JoinColumn(name = "CLIENT_ID", referencedColumnName = "ID")
     private ClientEntity client;
 
-
-//    public List<AddressEntity> getAddresses() {
-//        return addresses;
-//    }
 }
 

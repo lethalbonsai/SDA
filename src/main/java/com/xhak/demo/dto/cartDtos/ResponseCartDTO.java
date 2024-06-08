@@ -3,6 +3,8 @@ package com.xhak.demo.dto.cartDtos;
 import com.xhak.demo.entities.OrderItemEntity;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.List;
@@ -10,7 +12,9 @@ import java.util.List;
 @Getter
 @Setter
 public class ResponseCartDTO {
+    @NotNull(message = "Cart ID is required")
     private Long id;
+    @NotNull(message = "User ID is required")
     private Long userId;
     @ArraySchema(
             arraySchema = @Schema(

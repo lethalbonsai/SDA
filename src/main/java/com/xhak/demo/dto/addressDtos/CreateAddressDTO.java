@@ -2,6 +2,7 @@ package com.xhak.demo.dto.addressDtos;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +18,7 @@ public class CreateAddressDTO {
     @NotBlank(message = "Street is required")
     @Schema(example = "Baker Street")
     private String street;
-    @NotBlank(message = "Zip code is required")
+    @NotNull(message = "Zip code is required")
     @Schema(example = "12345")
     private String zipCode;
     private Long userId;

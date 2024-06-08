@@ -1,6 +1,7 @@
 package com.xhak.demo.dto.orderDtos;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDateTime;
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 public class ResponseOrderDTO {
+    @NotNull(message = "Order ID is mandatory")
     private Long id;
     @NotBlank(message = "Price cannot be empty")
     private Long price;
@@ -17,7 +19,7 @@ public class ResponseOrderDTO {
     private LocalDateTime orderDate;
     @NotBlank(message = "Delivery date cannot be empty")
     private LocalDateTime deliveryDate;
-    @NotBlank(message = "User ID cannot be empty")
+    @NotNull(message = "User ID cannot be empty")
     private Long userId;
 
 }
