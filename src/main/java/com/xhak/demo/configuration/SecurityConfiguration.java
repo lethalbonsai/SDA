@@ -16,7 +16,7 @@ import org.springframework.security.config.annotation.authentication.configurati
 
 @AllArgsConstructor
 @EnableMethodSecurity
-@EnableWebSecurity
+//@EnableWebSecurity
 @Configuration
 public class SecurityConfiguration {
 
@@ -30,7 +30,7 @@ public class SecurityConfiguration {
                 .requestMatchers(HttpMethod.GET,"/api/").permitAll()
                 .requestMatchers(HttpMethod.POST,"/api/").hasRole("ADMIN")
                 .requestMatchers(HttpMethod.PUT,"/api/").hasAnyRole("ADMIN","USER")
-                .requestMatchers(HttpMethod.POST,"/api/auth/login").hasAnyRole()
+                .requestMatchers(HttpMethod.POST,"/api/auth/login").hasAnyRole("ADMIN","USER")
                 .requestMatchers(HttpMethod.POST,"/api/auth/register").permitAll()
                 .anyRequest().authenticated());
 

@@ -25,6 +25,8 @@ public class ClientEntity {
     private String firstName;
     @Column(name = "LAST_NAME")
     private String lastName;
+    @Column(name = "USERNAME")
+    private String username;
     @Column(name = "EMAIL")
     private String email;
     @Column(name = "PHONE")

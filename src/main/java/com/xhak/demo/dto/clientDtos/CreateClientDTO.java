@@ -26,6 +26,10 @@ public class CreateClientDTO {
     @Size(min = 2, max = 50, message = "Last name must be between 2 and 50 characters")
     @Schema(example = "Doe")
     private String lastName;
+    @NotBlank(message = "Username is required")
+    @Size(min = 2, max = 50, message = "Username must be between 2 and 50 characters")
+    @Schema(example = "johndoe")
+    private String username;
     @NotNull(message = "Email is required")
     @Email(message = "Email should be valid")
     @Schema(example = "user@gmail.com")

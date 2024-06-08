@@ -19,7 +19,7 @@ public class ProductServiceFromDB implements ProductService {
     ProductRepository productRepository;
     ProductMapper productMapper;
     @Override
-    public List<ResponseProductDTO> getAllReviews() {
+    public List<ResponseProductDTO> getAllProducts() {
         List<ProductEntity> productList = productRepository.findAll();
         List<ResponseProductDTO> responseProductDTOList = new ArrayList<>();
         for (ProductEntity productEntity : productList) {
@@ -29,7 +29,7 @@ public class ProductServiceFromDB implements ProductService {
     }
 
     @Override
-    public Optional<ResponseProductDTO> getReviewById(Long id) {
+    public Optional<ResponseProductDTO> getProductById(Long id) {
         ProductEntity foundProduct = productRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("Product with id: " + id + " was not found!"));
         return Optional.of(productMapper.toResponseProductDTO(foundProduct));
