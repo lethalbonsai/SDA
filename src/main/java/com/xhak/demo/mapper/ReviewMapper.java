@@ -15,11 +15,19 @@ public class ReviewMapper {
         responseReviewDTO.setCreatedTime(reviewEntity.getCreatedTime());
         return responseReviewDTO;
     }
-    public ReviewEntity toMapToEntity(CreateReviewDTO createReviewDTO){
+    public ReviewEntity toMapToReviewEntity(CreateReviewDTO createReviewDTO){
         ReviewEntity reviewEntity = new ReviewEntity();
         reviewEntity.setRating(createReviewDTO.getRating());
         reviewEntity.setComment(createReviewDTO.getComment());
         reviewEntity.setCreatedTime(createReviewDTO.getCreatedTime());
         return reviewEntity;
+    }
+
+    public CreateReviewDTO toMapToCreateReviewEntity(ReviewEntity reviewEntity){
+        CreateReviewDTO createReviewDTO = new CreateReviewDTO();
+        createReviewDTO.setRating(reviewEntity.getRating());
+        createReviewDTO.setComment(reviewEntity.getComment());
+        createReviewDTO.setCreatedTime(reviewEntity.getCreatedTime());
+        return createReviewDTO;
     }
 }

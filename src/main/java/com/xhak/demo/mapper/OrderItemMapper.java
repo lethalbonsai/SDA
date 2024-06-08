@@ -24,12 +24,10 @@ public class OrderItemMapper {
         return orderItemEntity;
     }
 
-//    public CreateOrderItemDTO mapToCreateOrderItemEntity(OrderItemEntity orderItemEntity) {
-//        CreateOrderItemDTO createOrderItemDTO = new CreateOrderItemDTO();
-//        createAddressDTO.setState(addressEntity.getState());
-//        createAddressDTO.setCity(addressEntity.getCity());
-//        createAddressDTO.setStreet(addressEntity.getStreet());
-//        createAddressDTO.setZipCode(addressEntity.getZipCode());
-//        return createAddressDTO;
-//    }
+    public CreateOrderItemDTO toMapToOrderItemEntity(OrderItemEntity orderItemEntity) {
+        CreateOrderItemDTO createOrderItemDTO = new CreateOrderItemDTO();
+        createOrderItemDTO.setQuantity(orderItemEntity.getQuantity());
+        createOrderItemDTO.setTotalPrice(orderItemEntity.getTotalPrice());
+        return createOrderItemDTO;
+    }
 }

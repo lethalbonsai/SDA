@@ -47,7 +47,7 @@ public class OrderItemServiceFromDB implements OrderItemService {
                 () -> new RuntimeException("OrderItem with id: " + id + " was not found!"));
         orderItemMapper.toMapToOrderItemEntity(createOrderItemDTO);
         OrderItemEntity updatedOrderItem = orderItemRepository.save(findOrderItem);
-        return null;
+        return orderItemMapper.toMapToOrderItemEntity(updatedOrderItem);
     }
 
     @Override

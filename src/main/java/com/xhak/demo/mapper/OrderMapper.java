@@ -25,4 +25,13 @@ public class OrderMapper {
         orderEntity.setDeliveryDate(createOrderDTO.getDeliveryDate());
         return orderEntity;
     }
+
+    public CreateOrderDTO mapToCreateOrderEntity(OrderEntity orderEntity){
+        CreateOrderDTO createOrderDTO = new CreateOrderDTO();
+        createOrderDTO.setPrice(orderEntity.getPrice());
+        createOrderDTO.setStatus(orderEntity.getStatus());
+        createOrderDTO.setOrderDate(orderEntity.getOrderDate());
+        createOrderDTO.setDeliveryDate(orderEntity.getDeliveryDate());
+        return createOrderDTO;
+    }
 }

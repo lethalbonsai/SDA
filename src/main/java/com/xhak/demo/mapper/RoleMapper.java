@@ -11,11 +11,16 @@ public class RoleMapper {
         ResponseRoleDTO responseRoleDTO = new ResponseRoleDTO();
         responseRoleDTO.setId(roleEntity.getId());
         responseRoleDTO.setRoleName(roleEntity.getRoleName());
-        return new ResponseRoleDTO();
+        return responseRoleDTO;
     }
     public RoleEntity mapToRoleEntity(CreateRoleDTO createRoleDTO) {
         RoleEntity roleEntity = new RoleEntity();
         roleEntity.setRoleName(createRoleDTO.getRoleName());
         return roleEntity;
+    }
+    public CreateRoleDTO mapToCreateRoleDTO(RoleEntity roleEntity) {
+        CreateRoleDTO createRoleDTO = new CreateRoleDTO();
+        createRoleDTO.setRoleName(roleEntity.getRoleName());
+        return createRoleDTO;
     }
 }
