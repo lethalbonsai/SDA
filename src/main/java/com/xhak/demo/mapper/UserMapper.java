@@ -20,8 +20,6 @@ public class UserMapper {
     public ResponseUserDTO toResponseUserDTO(UserEntity userEntity) {
         ResponseUserDTO responseUserDTO = new ResponseUserDTO();
         responseUserDTO.setId(userEntity.getId());
-        responseUserDTO.setFirstName(userEntity.getFirstName());
-        responseUserDTO.setLastName(userEntity.getLastName());
         responseUserDTO.setUsername(userEntity.getUsername());
         responseUserDTO.setEmail(userEntity.getEmail());
         responseUserDTO.setPassword(userEntity.getPassword());
@@ -32,8 +30,6 @@ public class UserMapper {
 
     public UserEntity mapToUserEntity(CreateUserDTO createUserDTO) {
         UserEntity userEntity = new UserEntity();
-        userEntity.setFirstName(createUserDTO.getFirstName());
-        userEntity.setLastName(createUserDTO.getLastName());
         userEntity.setUsername(createUserDTO.getUsername());
         userEntity.setEmail(createUserDTO.getEmail());
         userEntity.setPassword(createUserDTO.getPassword());
@@ -45,8 +41,6 @@ public class UserMapper {
 
     public CreateUserDTO mapToCreateUserEntity(UserEntity userEntity) {
         CreateUserDTO createUserDTO = new CreateUserDTO();
-        createUserDTO.setFirstName(userEntity.getFirstName());
-        createUserDTO.setLastName(userEntity.getLastName());
         createUserDTO.setUsername(userEntity.getUsername());
         createUserDTO.setEmail(userEntity.getEmail());
         createUserDTO.setPassword(userEntity.getPassword());

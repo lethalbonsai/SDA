@@ -17,7 +17,6 @@ public class CreateCategoryDTO {
     @Size(max = 100, message = "Name cannot be longer than 100 characters")
     @Schema(example = "Electronics")
     private String name;
-    @NotBlank(message = "Product list cant be empty")
     @ArraySchema(
             arraySchema = @Schema(
                     description = "List of products",

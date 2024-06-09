@@ -3,9 +3,11 @@ package com.xhak.demo.controllers;
 import com.xhak.demo.dto.categoryDtos.CreateCategoryDTO;
 import com.xhak.demo.dto.categoryDtos.ResponseCategoryDTO;
 import com.xhak.demo.service.CategoryService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
@@ -17,6 +19,7 @@ import java.util.Optional;
 public class CategoryController {
     private CategoryService categoryService;
 
+    @PreAuthorize("hasRole('ROLE_USER')")
     @GetMapping("{id}")
     public ResponseEntity<ResponseCategoryDTO> getCategoryById(@PathVariable Long id) {
         Optional<ResponseCategoryDTO> category = categoryService.getCategoryById(id);
@@ -26,6 +29,7 @@ public class CategoryController {
             return ResponseEntity.notFound().build();
         }
     }
+    @PreAuthorize("hasRole('ROLE_USER')")
     @PostMapping
     public ResponseEntity<Long> createCategory(@RequestBody CreateCategoryDTO category) {
         return ResponseEntity.ok(categoryService.createCategory(category));
