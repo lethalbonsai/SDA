@@ -23,6 +23,7 @@ public class AuthController {
     public ResponseEntity<String> login(@RequestBody LogInDTO logInDTO) {
         return ResponseEntity.ok(authServiceFromDB.accountLogin(logInDTO));
     }
+
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody RegisterEmployeeDTO registerEmployeeDTO) {
         return ResponseEntity.ok(authServiceFromDB.registerAccount(registerEmployeeDTO));
