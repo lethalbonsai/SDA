@@ -16,7 +16,6 @@ import java.util.Optional;
 @RequestMapping("/api/address")
 public class AddressController {
     private AddressService addressService;
-
     @GetMapping("/{id}")
     public ResponseEntity<ResponseAddressDTO> getAddressById(@PathVariable Long id) {
         Optional<ResponseAddressDTO> address = addressService.getAddressById(id);
